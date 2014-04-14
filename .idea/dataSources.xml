@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2449646932">
+    <data-source source="LOCAL" name="Rails chcemauto: development" uuid="e7187fea-330e-497c-b41d-a5e951f3ac28">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:chcemauto_development</jdbc-url>
+      <user-name>pavelsluka</user-name>
+      <user-password>dfc6dfcfdfdcdfcbdfdadfd9dfc9dfc2dfc4dfcfdfdadfccdfcf</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails chcemauto: test" uuid="81c5549d-dd77-4172-b587-ebd86ed15a11">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:chcemauto_test</jdbc-url>
+      <user-name>pavelsluka</user-name>
+      <user-password>dfc6dfcfdfdcdfcbdfdadfd9dfc9dfc2dfc4dfcfdfdadfccdfcf</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails chcemauto: production" uuid="0e3ee927-0448-43d6-9abc-accc4a770991">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:chcemauto_production</jdbc-url>
+      <user-name>pavelsluka</user-name>
+      <user-password>dfc6dfcfdfdcdfcbdfdadfd9dfc9dfc2dfc4dfcfdfdadfccdfcf</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

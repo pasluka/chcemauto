@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Znacka:</strong>
+  <%= @version.brand.title %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @version.model.title %>
+</p>
+
+
+<p>
+  <strong>Vybava:</strong>
+  <%= @version.title %>
+</p>
+
+<p>
+  <strong>Cena:</strong>
+  <%= @version.price %> €
+</p>
+
+
+<p>
+  <strong>Motor:</strong>
+  <%= @version.engine.title %>
+</p>
+
+<table>
+    <tr>Vykon: <%= @version.engine.power %> kW/<%= @version.engine.powerin %> ot./min</tr><br>
+    <tr>Krutiaci moment: <%= @version.engine.torque %> Nm/<%= @version.engine.torquein %> ot./min</tr><br>
+    <tr>Objem motora/pocet valcov: <%= @version.engine.volume %> cm3/<%= @version.engine.cylinders %>-valec</tr><br>
+    <tr>Zrychlenie(0-100km/h): <%= @version.engine.accel %> s </tr><br>
+    <tr>Spotreba:
+        <td>Mesto: <%= @version.engine.consucity %> l/100 km</td>
+        <td>Mimomesto: <%= @version.engine.consuextra %> l/100 km</td>
+        <td>Kombinovane: <%= @version.engine.counsucomb %> l/100 km</td>
+    </tr>
+  </table>
+
+<%= link_to 'Upraviť', edit_version_path(@version) %> |
+<%= link_to 'Späť', versions_path %>

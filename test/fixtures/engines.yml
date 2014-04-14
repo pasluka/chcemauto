@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  model_id: 
+  cylinders: 1
+  volume: 1
+  power: 1
+  powerin: 1
+  torque: 1
+  torquein: 1
+  accel: 1.5
+  consucity: 1.5
+  consuextra: 1.5
+  counsucomb: 1.5
+
+two:
+  title: MyString
+  model_id: 
+  cylinders: 1
+  volume: 1
+  power: 1
+  powerin: 1
+  torque: 1
+  torquein: 1
+  accel: 1.5
+  consucity: 1.5
+  consuextra: 1.5
+  counsucomb: 1.5

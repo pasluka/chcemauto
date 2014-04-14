@@ -1,0 +1,33 @@
+<h1>Moje vozidlá</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Znacka</th>
+      <th>Model</th>
+      <th>Vybava</th>
+      <th>Motor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @versions.each do |version| %>
+      <tr>
+        <td><%= version.brand.title %></td>
+        <td><%= version.model.title %></td>
+        <td><%= version.title %></td>
+        <td><%= version.engine.title %></td>
+        <td><%= link_to 'Zobraziť', version %></td>
+        <td><%= link_to 'Upraviť', edit_version_path(version) %></td>
+        <td><%= link_to 'Vymazať', version, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Pridat auto', new_version_path %>

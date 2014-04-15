@@ -56,7 +56,7 @@
  <!--tu som pridal vypis vsetkych modelov-->
 <% @version.items.each do |item| %>
     <tr>
-    <td><%= item.title %></td> <td> <%=  item.price>0 ? item.price : "S"   %></td>
+    <td><%= item.title %></td> <td> <%=  item.price>0 ? item.price : "S"   %><%= check_box_tag 'item_ids[]', item.id %></td>
       </tr>
     <br>
 <% end %>

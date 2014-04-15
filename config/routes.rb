@@ -1,7 +1,13 @@
 Chcemauto::Application.routes.draw do
+
+
   get "models/index"
-  resources :versions
+
   root to: "versions#index"
+
+  resources :versions do
+    resources :items
+  end
 
   namespace :dynamic_select do
     get ':brand_id/models', to: 'models#index', as: 'models'

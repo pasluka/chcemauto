@@ -1,0 +1,31 @@
+<h1>Prvky výbavy</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prvok</th>
+      <th>Cena</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.title %></td>
+        <td><%= item.price %></td>
+        <td><%= link_to 'Vymazať', [@version, item], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Upraviť', edit_version_item_path(@version, item) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Nový prvok', new_version_item_path(:verzia => @version.id) %>
+<%= link_to 'Späť', version_path(@version) %>
+
+

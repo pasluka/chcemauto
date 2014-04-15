@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Znacka:</strong>
+  <strong>Značka:</strong>
   <%= @version.brand.title %>
 </p>
 
@@ -12,7 +12,7 @@
 
 
 <p>
-  <strong>Vybava:</strong>
+  <strong>Výbava:</strong>
   <%= @version.title %>
 </p>
 
@@ -28,16 +28,42 @@
 </p>
 
 <table>
-    <tr>Vykon: <%= @version.engine.power %> kW/<%= @version.engine.powerin %> ot./min</tr><br>
-    <tr>Krutiaci moment: <%= @version.engine.torque %> Nm/<%= @version.engine.torquein %> ot./min</tr><br>
-    <tr>Objem motora/pocet valcov: <%= @version.engine.volume %> cm3/<%= @version.engine.cylinders %>-valec</tr><br>
-    <tr>Zrychlenie(0-100km/h): <%= @version.engine.accel %> s </tr><br>
+    <tr>Výkon: <%= @version.engine.power %> kW/<%= @version.engine.powerin %> ot./min</tr><br>
+    <tr>Krútiaci moment: <%= @version.engine.torque %> Nm/<%= @version.engine.torquein %> ot./min</tr><br>
+    <tr>Objem motora/počet valcov: <%= @version.engine.volume %> cm3/<%= @version.engine.cylinders %>-valec</tr><br>
+    <tr>Zrýchlenie(0-100km/h): <%= @version.engine.accel %> s </tr><br>
     <tr>Spotreba:
         <td>Mesto: <%= @version.engine.consucity %> l/100 km</td>
         <td>Mimomesto: <%= @version.engine.consuextra %> l/100 km</td>
-        <td>Kombinovane: <%= @version.engine.counsucomb %> l/100 km</td>
+        <td>Kombinované: <%= @version.engine.counsucomb %> l/100 km</td>
     </tr>
   </table>
 
+<b>Vo výbave:</b>
+<table>
+  <thead>
+  <tr>
+    <th>Prvok</th>
+    <th>Cena(€)</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+ <!--tu som pridal vypis vsetkych modelov-->
+<% @version.items.each do |item| %>
+    <tr>
+    <td><%= item.title %></td> <td> <%=  item.price>0 ? item.price : "S"   %></td>
+      </tr>
+    <br>
+<% end %>
+  </tbody>
+</table>
+(S = seriovo vo vybave)<br>
+
+<%= link_to 'Zobrazit prvky vybavy', version_items_path(@version) %> |
 <%= link_to 'Upraviť', edit_version_path(@version) %> |
 <%= link_to 'Späť', versions_path %>

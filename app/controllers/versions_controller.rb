@@ -28,7 +28,7 @@ class VersionsController < ApplicationController
 
     respond_to do |format|
       if @version.save
-        format.html { redirect_to @version, notice: 'Version was successfully created.' }
+        format.html { redirect_to @version, notice: 'Verzia automobilu bola vytvorena.' }
         format.json { render action: 'show', status: :created, location: @version }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class VersionsController < ApplicationController
   def update
     respond_to do |format|
       if @version.update(version_params)
-        format.html { redirect_to @version, notice: 'Version was successfully updated.' }
+        format.html { redirect_to @version, notice: 'Verzia automobilu bola upravena.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prvok:</strong>
+  <%= @item.title %>
+</p>
+
+<p>
+  <strong>Cena:</strong>
+  <%= @item.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_version_item_path(@version, item) %> |
+<%= link_to 'Back', version_items_path(@vesion) %>
